@@ -15,7 +15,11 @@ export default class Home extends Component {
         const {data, correctCards} = this.state;
         data.forEach(element => {
             if(Object.getOwnPropertyNames(element).includes("pid" && "byr" && "iyr" && "eyr" && "hgt" && "hcl" && "ecl")) {
-                if(element.pid.length == 9 && 1920 < Number(element.byr) < 2002 && 2010 < Number(element.iyr) < 2021 && 2021 < Number(element.eyr) < 2031) {
+                if(element.pid.length === 9 
+                    && 1920 < Number(element.byr) < 2002 
+                    && 2010 < Number(element.iyr) < 2021 
+                    && 2021 < Number(element.eyr) < 2031
+                    && element.hgt ) {
 
                 }
             }
